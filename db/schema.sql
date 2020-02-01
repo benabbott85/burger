@@ -11,5 +11,3 @@ CREATE TABLE burgers (
     PRIMARY KEY(id)
 );
 
-INSERT INTO burgers (id, burger_name, devoured)
-VALUES(1, "cricket burger", true), (2, "big mac", false), (3, "all american burger", true)
