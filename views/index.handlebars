@@ -1,11 +1,13 @@
 <h1>Burgers!</h1>
 
+<img id="cricketburger" src="https://media.bizj.us/view/img/10855691/cherry-cricket*1200xx4896-2754-0-255.jpg" alt:"Cricket bruger">
+
 <h2>Burgers that have been eaten!</h2>
 
 <ul>
   {{#each burgers}}
-    {{#unless sleepy}}
-      {{> burgers/burger-block sleep=true}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured=true}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -14,13 +16,13 @@
 
 <ul>
   {{#each burgers}}
-    {{#if sleepy}}
-      {{> burgers/burger-block sleep=false}}
+    {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
     {{/if}}
   {{/each}}
 </ul>
 
-<h2>Add a Burger</h2>
+<h2>Add a Burger!</h2>
 <form class="create-form">
 
   <div class="form-group">
@@ -31,7 +33,7 @@
   <div class="form-group">
     <label for="slee">Devoured or not?</label><br>
     <input type="radio" name="sleepy" value="1" checked> Devoured!<br>
-    <input type="radio" name="sleepy" value="0"> Not yet devoured!
+    <input type="radio" name="sleepy" value="0"> Not yet Devoured!
   </div>
 
   <button type="submit">Add Burger</button>
